@@ -1,0 +1,2 @@
+# Shopito
+Lightweight Mobile Store
