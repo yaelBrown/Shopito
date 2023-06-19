@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  shopito_db:
+    ports:
+      - '3306:3306'
+    container_name: shopito_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=shopshopshop
+    image: mysql:latest
