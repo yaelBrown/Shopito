@@ -1,0 +1,4 @@
+export const metadata = {
+  title: 'Shopito - Social Store platform',
+  description: 'Lightweight store for everyday sellers.',
+}
