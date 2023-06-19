@@ -1,0 +1,18 @@
+{
+  "name": "shopito",
+  "version": "1.0.0",
+  "description": "Lightweight Mobile Store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bootstrap": "cd scripts && sh bootstrap.sh",
+    
+    "dev": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
