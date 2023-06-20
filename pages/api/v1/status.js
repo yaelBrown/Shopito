@@ -2,7 +2,6 @@ import connection from "@/config/connection";
 
 export default function handler(req, res) {
   try {
-    let out;
     connection.query(
       "SELECT id, message FROM status",
       function(err, response, fields) {
