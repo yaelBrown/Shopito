@@ -1,9 +1,9 @@
 version: '3.3'
 services:
-  shopito_db:
-    ports:
-      - '3306:3306'
-    container_name: shopito_db
+  db:
+    image: postgres:latest
+    ports: 
+      - '5432:5432'
+    restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=shopshopshop
-    image: mysql:latest
+      POSTGRES_PASSWORD: shopshopshop

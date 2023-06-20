@@ -1,15 +1,16 @@
-import connection from "@/config/connection"; 
+import pool from "@/config/pool";
+
 
 export default function handler(req, res) {
   try {
-    connection.query(
-      "SELECT id, message FROM status",
-      function(err, response, fields) {
-        res.status(200).json({ data: response[0].message })
-        if (err) throw Error(err.message)
+    pool.query('SELECT * FROM status', (error, results) => {
+      if (error) {
+        throw Error(error.message)
+        return
       }
-    ) 
+      res.status(200).json({ data: results.rows[0].message })
+    })
   } catch(err) {
-    res.status(400).json(err)
-  } 
+    res.status(500).json(err)
+  }
 }
